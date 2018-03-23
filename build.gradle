@@ -1,0 +1,21 @@
+group 'io.blocko'
+
+repositories {
+  maven {
+    url "https://plugins.gradle.org/m2/"
+  }
+  mavenLocal()
+  maven {
+    url 'https://nexus.blocko.io/repository/blocko-maven-repository'
+  }
+  mavenCentral()
+}
+
+dependencies {
+  classpath "gradle.plugin.com.palantir.gradle.gitversion:gradle-git-version:0.10.1"
+  classpath "gradle.plugin.nl.javadude.gradle.plugins:license-gradle-plugin:0.14.0"
+  
+  compile 'io.blocko:coinstack:3.0.27'
+  compile "io.blocko:coinstack-utils:0.2-SNAPSHOT"
+  compile 'com.beust:jcommander:1.72'
+}
